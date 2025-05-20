@@ -1,0 +1,738 @@
+
+/* --------------------------------scroll design */
+
+
+.bodyDiv{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* align-items: flex; */
+    scroll-timeline-name: --squareTimeline;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: black;
+    /* cursor: none; */
+    /* z-index: 1; */
+}
+
+.MainClass{
+    width: 100%;
+    height: 100%;
+}
+
+
+.bodyDiv::-webkit-scrollbar{
+    display: none;
+}
+
+ html::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: rgb(74, 69, 69);
+  }
+
+
+  .hover-highlight {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    background: radial-gradient(circle, #86858155 0%, transparent 40%);
+    border-radius: 50%;
+    /* transition: left 10ms, top 10ms; */
+    /* z-index: 12; */
+  }
+
+
+/* -------------------------Hamburger Menu Styles------ */
+.HamOuter-div {
+    position: fixed;
+    background-color: #efcc04;
+    top: 0;
+    right: -250px; /* hidden initially */
+    width: 240px;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    /* flex-direction: column; */
+    justify-content: center;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: right 0.7s ease-in-out; 
+}
+
+  
+.HamOuter-div.open {
+    right: 0;
+}
+
+
+
+li{
+    list-style: none;
+    font-size: 22px;
+}
+
+.haminner-div{
+position: relative;
+margin-top: 40px;
+margin-right: 2%;
+width: fit-content;
+align-self: flex-end;
+box-shadow: 2px;
+}
+
+
+.HamContainer{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-right: 5%;
+    /* border: 1px solid white; */
+}
+
+.menuList{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 40px;
+    /* padding-left: 20px; */
+    /* border: 1px solid white; */
+}
+
+.NavList{
+    /* margin-right: 5%; */
+    margin-top: 1rem;
+    /* margin-top: 10vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    align-items: center;
+    /* flex-grow: 2; */
+    height: 100%;
+    /* border: 1px solid white; */
+}
+
+.SocialMediaList{
+    height: 50%;
+    width: fit-content;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 2px solid black;
+    margin-top: 5rem;
+    transition: 1s ease-in-out; 
+}
+
+.VerSocialList{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    /* border: 1px solid white; */
+    margin-left: 3rem;
+
+}
+
+.HomeLink{
+    border-bottom: 3px solid black;
+    border-radius: 2px;
+}
+
+.SocialIconsSpace{
+    padding: 10px;
+}
+
+.SocialspaceHome{
+    padding: 5px;
+}
+
+.MoveIcon{
+    visibility: hidden;
+}
+.backIcon{ 
+    /* padding: 3rem;
+    margin-top: 5rem; */
+    /* font-size: 20rem; */
+    /* margin-top: 1rem; */
+}
+/* ----------------------------------Home Styles */
+
+.Home{
+    height: fit-content;
+    top: 0;
+    position: sticky;
+    /* background-color: #00d4ff; */
+    /* visibility: hidden; */
+    /* border: 1px red solid; */
+    z-index: 10;
+    /* background-color: #00d4ff; */
+}
+
+.InvisibleDiv
+{
+
+    height: 250px;
+    visibility: hidden;
+    /* z-index: 0; */
+}
+
+.reduceHight_normal{
+    transform: scale(1); 
+    transition: 1s ease-in-out; 
+}
+.reduceHight_low{
+    /* scale: 0.8; */
+    transform: scale(0.6); 
+    transition: 1s ease-in-out; 
+}
+.reduceHight_vlow{
+    transform: scale(0.7); 
+    /* scale: 0.7; */
+    transition: 1s ease-in-out; 
+    margin-top:0%;
+}
+
+.height_Normal{
+    
+}
+
+.HomeOuterDiv{
+    top: 0;
+    position:relative;
+    height: 40rem;
+    width: 100%;
+    /* background-color: rgb(4, 4, 4); */
+    /* z-index: 0; */
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    visibility: visible;
+    transition: 1s ease-in-out; 
+    /* border: 1px red solid; */
+    /* z-index: 10; */
+    /* background-color: #00d4ff; */
+    background: linear-gradient(-45deg, #14c8ff4b, #0f0f0f, black, #f1cf097a);
+    background-size: 500% 500%;
+    animation: gradient 15s ease infinite;
+    
+}
+
+@keyframes gradient {
+    0% {
+        background-color: black;
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.reduceTopDiv{
+    height: 20rem;
+    position:sticky;
+    transition: 1s ease-in-out; 
+    visibility: visible;
+    background: none;
+    background-color:black;
+    animation: none;
+    
+    /* z-index: 11; */
+}
+
+
+.HideTopDiv{
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    height: 3.5rem;
+    /* position:fixed; */
+    /* scale: 0; */
+    transition: 1s ease-in-out; 
+    /* z-index: 5; */
+}
+
+.OpacityHide{
+    opacity: 0;
+}
+
+
+.ImageDiv{
+    width: fit-content;
+    height: 38rem;
+    overflow: hidden;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    /* padding: 1rem; */
+    transition: 1s ease-in-out; 
+    /* border: 1px solid red; */
+}
+
+.ReduceImage{
+    height: 30rem;
+    transition: 1s ease-in-out; 
+}
+
+.ImgSocialDiv{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: -2rem;
+    transition: 1s ease-in-out;    
+    margin-left: 10rem;
+    /* border: 1px solid red; */
+
+}
+
+
+
+.AfterImgSocialDiv
+{
+    
+    margin-top: 5.5rem;
+    margin-left: -2rem;
+    transition: 1s ease-in-out; 
+    margin-right: 10rem;
+
+}
+
+.reduceSocialIcons
+{
+    transform: scale(0.7); 
+    margin-bottom: 2.5rem;
+    margin-left: -2rem;
+    transition: 1s ease-in-out; 
+}
+
+
+
+.glowmyimg{
+    animation: glowmyimg 1.5s infinite alternate;
+    box-shadow: 50px 50px 10px lightblue;
+}
+
+
+@keyframes glowmyimg {
+    0% {
+        
+        /* transform: rotate(190deg);  */
+        box-shadow: 0 0 2px #FFD700, 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 40px #FFD700;
+    }
+    100% {
+        box-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff;
+    }
+}
+
+
+.imgclass{
+    /* zoom: 142%; */
+    width:100%;
+    height: 100%;
+    opacity: 90%;
+    /* border: 1px solid white; */
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.4);
+}
+
+.LeftDiv{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /* padding: 10rem; */
+    /* border: 1px red solid; */
+    transition: 1s ease-in-out; 
+    /* background-color: #00d4ff; */
+    
+}
+
+.leftSlide{
+    display: flex;
+    margin-left: 15rem;
+    margin-top: 1.5rem;
+    transition: 1s ease-in-out; 
+    
+}
+
+.RightDiv{
+    
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* border: 1px red solid; */
+    /* z-index: 0; */
+    /* background-color: #00d4ff; */
+   
+    width: 50%;
+}
+
+/* .reduceImgSco{
+      height: 25rem;
+    } */
+    
+
+.myName{
+    display: inline;
+    color:#fffef9;
+    font-size: 50px;
+    padding-left:20px;
+   
+}
+
+
+
+.myRole{
+    display: inline;
+    color: #efcc04;
+    font-size: 50px;
+    padding-left:20px;
+    /* border-left: 3px solid white; */
+}
+
+.myInfodiv{
+    height: fit-content;
+    /* display: flex; */
+    border-left: 3px solid white;
+    /* border: 1px red solid; */
+}
+
+
+.HomeInfo{
+    height: fit-content;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid white; */
+}
+
+ .headings{
+    display: inline; 
+    text-align: center;
+    color: white;
+    font-size: 90px;
+    margin-bottom:5rem; 
+}
+ 
+.hoverEffect{
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 40px #FFD700, 0 0 80px #FFD700;
+    animation: glow 1.5s infinite alternate;
+    transition: 0.5s ease-in-out; 
+}
+
+.shake{   
+    font-size: 90px;
+    transition: 0.5s ease-in-out; 
+    animation: glow 1.5s infinite alternate, shake 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        
+        /* transform: rotate(190deg);  */
+        text-shadow: 0 0 2px #FFD700, 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 40px #FFD700;
+    }
+    100% {
+        text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff;
+    }
+}
+
+@keyframes shake {
+    0%{
+        /* scale: 1.1; */
+        transform: rotate(-2deg)
+    }
+    20%{
+        /* scale: 1.1; */
+        transform: rotate(2deg)
+
+    }
+    60%{
+        /* scale: 1; */
+        transform: rotate(0deg)
+    }
+    100%{
+        /* scale: 1.1; */
+        transform: rotate(2deg);
+    }
+}
+
+.ShortInfoDiv
+{
+display: flex;
+width: 40rem;
+justify-content: center;
+align-items: flex-end;
+/* border: 1px solid white; */
+/* padding: 1rem; */
+
+
+
+}
+
+
+
+
+.ShortInfoP{
+    color: #efcc04;
+    font-size:25px;
+    text-align: left;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: 3px solid #efcc04;
+}
+
+.GlowDivClass
+{
+    box-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 40px #FFD700, 0 0 80px #FFD700;
+    animation: glowDiv 1.5s infinite alternate;
+    transition: 0.5s ease-in-out; 
+
+}
+
+
+@keyframes glowDiv {
+    0% {
+        
+        /* transform: rotate(190deg);  */
+        box-shadow: 0 0 2px #FFD700, 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 40px #FFD700;
+    }
+    100% {
+        box-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff;
+    }
+}
+
+
+/* -----------------------------------------About Section---------*/
+
+.AboutSection{
+    margin-top: 30rem;
+    position: relative;
+    height: fit-content;    /*use this approach to find out scroll div in outer site */
+    width: fit-content;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    /* border: 1px white solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rem;
+    /* z-index: 0; */
+}
+
+
+/* .AboutSection::-webkit-scrollbar 
+{
+    display: block;
+} */
+.SectionHeadings{
+    font-size: 50px;
+    position: sticky;
+}
+
+.aboutDiscriptionDiv{
+    padding: 100px;
+}
+
+/* ------------------------------------------Nav Horizontal---------- */
+
+.NavHorDivClass
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: center;
+    margin-top: -3rem;
+    background-color: black;
+    /* border: 1px red solid; */
+    /* z-index: 10; */
+   
+}
+
+
+/* follow this standard layout for all the other pages */
+
+.navListHorizontal{ 
+display: flex;
+/* width: 100%; */
+flex-wrap: wrap;
+  align-items: center;
+  justify-content:center;
+  background-color: black;
+  padding:0;
+  margin: 0;
+  list-style: none;
+  visibility: visible;
+  gap: 8rem;
+  /* z-index: 10; */
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+
+}
+
+.navHList{
+    /* width: 100%; */
+    
+    /* flex: 0 0 0 0 0 0 0 auto;  */
+    text-align: center;
+    padding: 1.5rem;
+    color: white !important;
+    
+}
+
+.navHList a {
+    color: white;
+}
+
+.active{
+    transition: 1s ease-in-out;
+    border-bottom: 3px solid #efcc04;
+    
+    
+    
+}
+
+.present a {
+    color: #efcc04;
+    font-size: 1.6rem;
+    /* animation: selected 1.5s forwards 1s; */
+    transition: 1s ease-in-out;
+}
+
+.presentVerMenu
+{
+    color: black;
+    font-size: 1.8rem;
+    transition: .5s ease-in-out;
+}
+
+@keyframes selected {
+    0% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow:
+            0 0 2px #FFD700,
+            0 0 5px #FFD700,
+            0 0 10px #FFD700,
+            0 0 10px #FFD700,
+            0 0 20px #FFD700;
+    }
+}
+
+.MinimizeArrowDiv{
+height: fit-content;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.MinimizeArrow{
+    font-size: 0rem;
+    transition: 1s ease-in-out; 
+}
+
+
+.MinimizeArrowAfter{
+    display: inline-block;
+    visibility: visible;
+    margin: 0;
+    font-size: 3rem;
+    justify-content: center;
+    transition: 1s ease-in-out; 
+    rotate: 180deg;
+}
+
+.RotateArrow{
+    rotate: 0deg;
+    transition: 1s ease-in-out; 
+}
+/* ---------------------------------------Skills-----
+ */
+
+
+ .SkillHeading{
+    color: white;
+ }
+
+ .skillDetails
+ {
+   
+    color: white;
+    padding: 16rem;
+    /* z-index: -1; */
+ }
+
+
+ /* ------------------------------------------Work--------- */
+
+ .WorkSectionDiv{
+    color: white;
+    padding: 16rem;
+ }
+
+
+
+
+ /* ---------------------------- */
+
+ /* -----------------------------------------------Projects-------------- */
+
+ .ProjectsSectionDiv
+{
+    color: white;
+    padding: 16rem;
+}
+
+ /* ------------------------------------------ */
+
+ /* ---------------------------------------------PlayStore----------------- */
+
+ .PlaystoreSectionDiv{
+    color: white;
+    padding: 16rem;
+ }
+
+/* ------------------------------------ */
+
+ /* -------------------------------------------------Certifications------------- */
+
+.CertificationsSectionsDiv{
+    color: white;
+    padding: 16rem;
+}
+
+
+/* ------------------------------------------------- */
+
+
+/* -------------------------------------------------Contact-----------------------*/
+
+.ContactSectionDiv{
+    color: white;
+    padding: 16rem;
+}
+
+/* -------------------------------------------- */
