@@ -47,8 +47,8 @@ export default function Home({ Scroll, divRef, HorizontalNavRef, CurrentSection,
             </div>
             <div className="ShortInfoDiv">
               <h2 className={`ShortInfoP ${hoverON ? "GlowDivClass" : ""}`}>
-                I'm a Software Engineer with around 4 years of experience as
-                both an SDET and SDE. I specialize in building, Automating and
+                A Software Engineer with around 4 years of experience as
+                 SDET and SDE. I specialize in building, Automating and
                 testing scalable web applications, Mobile Applications and API
                 services
               </h2>

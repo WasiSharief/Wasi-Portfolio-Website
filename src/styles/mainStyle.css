@@ -1,6 +1,27 @@
 
 /* --------------------------------scroll design */
 
+.globalColor{
+    color: #efcc04;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background: -webkit-linear-gradient( rgb(212, 181, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    display: inline;
+    font-size: 28px;
+    /* font-weight: 500; */
+    /* border-bottom: 2px solid #efcc04; */
+    
+}
+
+.globalColor a{
+    color:#efcc04;
+}
+
+.defaultcolor{
+    color: #FFD700;
+}
+
 
 .bodyDiv{
     height: 100vh;
@@ -36,6 +57,7 @@
 a {
     text-decoration: none;
     color: rgb(74, 69, 69);
+    /* font-family: Arial, Helvetica, sans-serif; */
   }
 
 
@@ -75,7 +97,7 @@ a {
 
 
 
-li{
+ li{
     list-style: none;
     font-size: 22px;
 }
@@ -485,8 +507,6 @@ align-items: flex-end;
 /* border: 1px solid white; */
 /* padding: 1rem; */
 
-
-
 }
 
 
@@ -495,7 +515,7 @@ align-items: flex-end;
 .ShortInfoP{
     color: #efcc04;
     font-size:25px;
-    text-align: left;
+    text-align: center;
     padding: 1.5rem;
     border-radius: 2rem;
     border: 3px solid #efcc04;
@@ -538,6 +558,7 @@ align-items: flex-end;
     justify-content: space-between;
     padding: 10rem;
     /* z-index: 0; */
+   ;
 }
 
 
@@ -551,9 +572,55 @@ align-items: flex-end;
 }
 
 .aboutDiscriptionDiv{
-    padding: 100px;
+    height: fit-content;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 60px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    line-height: 2.5rem;
+    text-align:center;
+    overflow-wrap: break-word;
+    /* border: 1px solid red;  */
 }
 
+.aboutDiscriptionDiv h2{
+
+    font-weight: 700;
+}
+
+
+.aboutTable{
+    padding-top: 2rem;
+    /* border-top: .2rem solid #efcc04; */
+    height: fit-content;
+    /* padding: 100px; */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    /* background-color: white; */
+    /* border: .1px solid #efcc04; */
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(252, 208, 16, .4);
+
+}
+
+.Label-Info{
+    position: relative;
+    display: flex;
+    width: 50%;
+    font-size: 1.3rem;
+    /* border: 1px solid red; */
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+.Label-Info h2{
+    color: #efcc04;
+}
 /* ------------------------------------------Nav Horizontal---------- */
 
 .NavHorDivClass
@@ -633,7 +700,7 @@ flex-wrap: wrap;
     }
     100% {
         text-shadow:
-            0 0 2px #FFD700,
+            0 0 2px ,
             0 0 5px #FFD700,
             0 0 10px #FFD700,
             0 0 10px #FFD700,
@@ -672,19 +739,306 @@ align-items: center;
 /* ---------------------------------------Skills-----
  */
 
-
- .SkillHeading{
-    color: white;
- }
-
- .skillDetails
+ .skillSection
  {
-   
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid red; */
     color: white;
-    padding: 16rem;
+    /* padding: 16rem; */
     /* z-index: -1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
  }
 
+ .skillHeading{
+    border: 1px solid #FFD700;
+    padding: 0.5rem 2rem 1rem 2rem;
+    border-radius: 3rem;
+    align-items: center;
+ }
+
+ .skillmaindiv{
+    position: relative;
+    width: 70%;
+    height: fit-content;
+    /* padding-left:50px; */
+    /* padding-right: 50px; */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #FFD700;
+    padding-top: 50px;
+ }
+
+ .sdetDiv{
+    padding: 30px;
+    width: 40%;
+    height: fit-content;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .sdeDiv{
+    padding: 30px;
+    width: 40%;
+    height: fit-content;
+    /* background-color: yellow; */
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* *{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #0077b6;
+} */
+
+.container{
+    width: 100%;
+    background: black;
+    /* border: 2px solid #FFD700; */
+    border-radius: 10px;
+    padding: 15px 30px;
+    color: white;
+    /* box-sizing: border-box; */
+}
+
+.container h1{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: black;
+}
+
+.container .skill{
+    margin-bottom: 40px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+.container .skill h3{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container .skill h4{
+    margin-top: -2rem;
+    float: inline-end;
+}
+
+.container .skill .skill-bar{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    border-radius: 15px;
+    background: #ffffff30;
+}
+
+.container .skill .fill-bar{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 20px;
+    border-radius: 15px;
+    background: #FFD700;
+}
+
+.container .skill .java{
+    animation: java 2s;
+    width: 75%;
+}
+
+.container .skill .selenium{
+    animation: selenium 2s;
+    width: 85%;
+}
+
+.container .skill .restapi{
+    animation: restapi 2s;
+    width: 55%;
+}
+
+.container .skill .appium{
+    animation: appium 2s;
+    width: 60%;
+}
+
+.container .skill .mysql{
+    animation: mysql 2s;
+    width: 50%;
+}
+
+.container .skill .vbscript{
+    animation: vbscript 2s;
+    width: 50%;
+}
+
+@keyframes java{
+    from{
+        width: 0;
+    }
+    to{
+        width: 75%;
+    }
+}
+
+@keyframes selenium{
+    from{
+        width: 0;
+    }
+    to{
+        width: 85%;
+    }
+}
+
+@keyframes restapi{
+    from{
+        width: 0;
+    }
+    to{
+        width: 55%;
+    }
+}
+
+@keyframes appium{
+    from{
+        width: 0;
+    }
+    to{
+        width: 60%;
+    }
+}
+
+@keyframes mysql{
+    from{
+        width: 0;
+    }
+    to{
+        width: 50%;
+    }
+}
+
+@keyframes vbscript{ 
+    from{
+        width: 0;
+    }
+    to{
+        width: 50%;
+    }
+}
+
+/* ---------------------------------As SDE */
+
+     .container .skill .javascript{
+        animation: javascript 2s;
+        width:80%;
+    }
+    
+    .container .skill .reactjs{
+        animation: reactjs 2s;
+        width: 75%;
+    }
+    
+    .container .skill .htmlcss{
+        animation: htmlcss 2s;
+        width: 90%;
+    }
+    
+    .container .skill .node{
+        animation: node 2s;
+        width: 55%;
+    }
+    
+    .container .skill .reactnative{
+        animation: reactnative 2s;
+        width: 50%;
+    }
+    
+    .container .skill .mongodb{
+        animation: mongodb 2s;
+        width: 50%;
+    }
+    
+
+    @keyframes javascript{
+        from{
+            width: 0;
+        }
+        to{
+            width: 80%;
+        }
+    }
+    
+    @keyframes reactjs{
+        from{
+            width: 0;
+        }
+        to{
+            width: 75%;
+        }
+    }
+    
+    @keyframes htmlcss{
+        from{
+            width: 0;
+        }
+        to{
+            width: 90%;
+        }
+    }
+    
+    @keyframes node{
+        from{
+            width: 0;
+        }
+        to{
+            width: 55%;
+        }
+    }
+    
+    @keyframes reactnative{
+        from{
+            width: 0;
+        }
+        to{
+            width: 50%;
+        }
+    }
+    
+    @keyframes mongodb{ 
+        from{
+            width: 0;
+        }
+        to{
+            width: 50%;
+        }
+    }
 
  /* ------------------------------------------Work--------- */
 
@@ -693,9 +1047,103 @@ align-items: center;
     padding: 16rem;
  }
 
+ .workMaindiv
+ {
+    position: relative;
+    border-left: 2px solid #efcc04;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+ }
+
+ .company{
+    /* border: 1px solid red; */
+    height: fit-content;
+    display: flex;
+    flex-direction:column;
+ }
+
+ .workMaindiv::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    left: -1.5rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: #FFD700;
+    border-radius: 50%;
+    border: 8px solid rgb(92, 91, 88);
+  }
+
+  .companyduration {
+    width: 100%;
+    display: flex;
+   /* justify-content: center; */
+   align-items: flex-start;
+  }
+  
+  .companylabeldiv {
+    flex: 2; /* 1 part out of 3 */
+  /* background-color: #00d4ff; */
+  display: flex;
+justify-content: center;
+}
+
+.companylabeldiv h1 a{
+    color: #FFD700;
+}
+
+  
+  .WorkDetails {
+    /* margin-top: .5rem; */
+    flex: 4; /* 2 parts out of 3 */
+    
+  }
+  
+ .companyduration
+{
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+ }
+
+ .companyduration h1 {
+    color: #FFD700;
+ }
 
 
 
+ul.worklist h3::before{
+    content: "•";
+    color: rgb(231, 219, 219);
+    font-size: 1.2em;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.worklist li h3{
+    font-weight: 600;
+}
+
+.WorkDetails h2 {
+    padding: 1rem;
+}
+
+.workMaindiv::after {
+    content: '';
+    position: absolute;
+    bottom: 11rem; /* You can change this to position vertically */
+    left: -1.5rem; /* Use right instead of left for other side */
+    width: 2rem;
+    height: 2rem;
+    background-color: #FFD700;
+    border-radius: 50%;
+    border: 8px solid rgb(92, 91, 88);
+  }
  /* ---------------------------- */
 
  /* -----------------------------------------------Projects-------------- */

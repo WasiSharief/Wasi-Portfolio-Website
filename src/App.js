@@ -165,7 +165,7 @@ function App() {
           {/* }>    */}
           {/* </Route> */}
           {/* <Route path="/s" element={ */}
-          <Skills ref={(el) => (SectionsRefs.current.skill = el)}></Skills>
+          <Skills ref={(el) => (SectionsRefs.current.skill = el)} CurrentSection={CurrentSection}></Skills>
           {/* }> */}
 
           {/* </Route> */}
