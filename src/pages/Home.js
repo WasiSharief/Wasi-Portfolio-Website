@@ -84,26 +84,27 @@ export default function Home({ Scroll, divRef, HorizontalNavRef, CurrentSection,
               >
                 <h1>
                   {" "}
-                  <FaLinkedin
+                 <a href="https://www.linkedin.com/in/wasiulla-sharief-3311131a4/" target={"_blank"}><FaLinkedin
                     className="SocialspaceHome"
                     style={{ fontSize: 30, color: "#0072b1" }}
                   />
+                  </a>
                 </h1>
                 <h1>
                   {" "}
-                  <FaStackOverflow color="white" className="SocialspaceHome" />
+                 <a href="https://stackoverflow.com/users/12483849/wasi-sharief" target={"_blank"}><FaStackOverflow color="white" className="SocialspaceHome" /></a>
                 </h1>
 
                 <h1>
                   {" "}
-                  <FaInstagramSquare
+                  <a href="https://www.instagram.com/wasi_sharief/?igsh=ZHhzZXZpY295MTQ3#" target={"_blank"}><FaInstagramSquare
                     color="white"
                     className="SocialspaceHome"
-                  />
+                  /></a>
                 </h1>
                 <h1>
                   {" "}
-                  <FaGithubSquare color="white" className="SocialspaceHome" />
+                  <a href="https://github.com/WasiSharief" target={"_blank"}><FaGithubSquare color="white" className="SocialspaceHome" /></a>
                 </h1>
               </div>
             </div>

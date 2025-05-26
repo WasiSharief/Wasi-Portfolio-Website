@@ -169,24 +169,28 @@ const {smoothScrollInContainer } = useContext(ScrollMenuContext);
       <div className="SocialMediaList">
         <h1>
           {" "}
-          <FaLinkedin
+          <a href="https://www.linkedin.com/in/wasiulla-sharief-3311131a4/" target={"_blank"}><FaLinkedin
             className="SocialIconsSpace"
             style={{ fontSize: 30, color: "#0072b1" }}
           />
+          </a>
         </h1>
         <h1>
           {" "}
-          <FaStackOverflow color="black" className="SocialIconsSpace" />
+          <a href="https://stackoverflow.com/users/12483849/wasi-sharief" target={"_blank"}><FaStackOverflow color="black" className="SocialIconsSpace" />
+          </a>
         </h1>
 
         <h1>
           {" "}
-          <FaInstagramSquare color="black" className="SocialIconsSpace" />
+
+          <a href="https://www.instagram.com/wasi_sharief/?igsh=ZHhzZXZpY295MTQ3#" target={"_blank"}><FaInstagramSquare color="black" className="SocialIconsSpace" />
+          </a>
         </h1>
         <h1>
           {" "}
-          <FaGithubSquare color="black" className="SocialIconsSpace" />
-        </h1>
+          <a href="https://github.com/WasiSharief" target={"_blank"} ><FaGithubSquare color="black" className="SocialIconsSpace" />
+          </a></h1>
       </div>
     </div>
   );

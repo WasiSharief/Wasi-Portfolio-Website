@@ -1,23 +1,48 @@
-export default function Playstore( {ref}) {
+import { useState } from "react";
+
+export default function Playstore({ ref }) {
+  const [Hoveron, setHover] = useState("");
+
   return (
     <div ref={ref} className="PlaystoreSectionDiv">
-      <h1>PlayStore</h1>
-      <h2>
-        {" "}
-        I'm Wasi ulla Sharief, I was born Near KGF and raised in Bengaluru.
-        <br></br> I completed my Bacholers in AIIS. I'm a Software Engineer with
-        around 4 years of experience working as both an SDET and SDE. I
-        specialize in building and testing scalable web applications, combining
-        strong development skills with a solid foundation in test automation.{" "}
-        <br></br>My expertise includes developing automation frameworks using
-        Selenium and integrating customized AI chatbots into websites for
-        enhanced user interaction. I'm certified in Full Stack Development
-        (JavaScript & React), SDET practices, AI Prompt Engineering, and CI/CD
-        integrations using Jenkins.
-        <br></br> Passionate about delivering high-quality software and
-        constantly exploring new technologies..
-        <br></br>
-      </h2>
+      <div className="projectmaindiv">
+      <a
+            href="https://github.com/WasiSharief/LocationCapture"
+            target={"_blank"}
+          ><div
+          className={`Playstore-Tile ${
+            Hoveron === "ImgLoc" ? "ProjectHovered" : ""
+          }`}
+         
+        >
+         
+            <div
+              className={`playstoreProject ImgLocPlay ${
+                Hoveron === "ImgLoc" ? "ProjectHovered ProjectScale" : ""
+              }`}
+            ></div>
+         
+
+          <div className="ImgLocPlayDetails">
+            <h2 className="ImgLocPTitle">
+              Image Location Capture<br></br>
+            </h2>
+            <h2 className="ImgLocPTitle">
+              Downloads: 100+<br></br>
+            </h2>
+            <h3>
+              Its a Cross Platform Mobile Application, To Capture location along
+              with image and store it locally in Local Memory storage and can
+              access without Internet. This App was built using React Native and
+              Node.js
+            </h3>
+            <div className="playstorelogo">
+
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
     </div>
   );
 }

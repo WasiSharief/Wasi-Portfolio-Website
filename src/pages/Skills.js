@@ -46,6 +46,13 @@ export default function Skills({ ref, CurrentSection }) {
                 <span class="skill-bar"></span>
                 <span class={`fill-bar ${CurrentSection === 'Skill' ? 'vbscript' : ''}`}></span>
               </div>
+              <div class="skill">
+                <h3>Jenkins / CICD</h3>
+                <h4>50%</h4>
+                <span class="skill-bar"></span>
+                <span class={`fill-bar ${CurrentSection === 'Skill' ? 'vbscript' : ''}`}></span>
+              </div>
+            
             </div>
           </div>
 
@@ -90,8 +97,14 @@ export default function Skills({ ref, CurrentSection }) {
                 <span class="skill-bar"></span>
                 <span class={`fill-bar ${CurrentSection === 'Skill' ? 'mongodb' : ''}`}></span>
               </div>
+              <div class="skill">
+                <h3>AWS - EC2</h3>
+                <h4>50%</h4>
+                <span class="skill-bar"></span>
+                <span class={`fill-bar ${CurrentSection === 'Skill' ? 'mongodb' : ''}`}></span>
+              </div>
             </div>
-            <div></div>
+           
           </div>
         </div>
       </div>

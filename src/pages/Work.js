@@ -72,20 +72,23 @@ export default function Work({ ref }) {
           </div>
           <div className="companyduration">
             <div className="companylabeldiv">
-              <h1><a href="https://www.synechron.com/en-in" target={"_blank"}>Moosa CO (2019 - 2020)</a></h1>
+              <h1><a href="https://www.linkedin.com/company/moosa-socmedia/?originalSubdomain=inn" target={"_blank"}>Moosa SOCMEDIA (2019 - 2020)</a></h1>
             </div>
 
             <div className="WorkDetails">
               <h2 className="defaultcolor">
-                As SDET (Software Development Engineer in Test)
+                As SDET Intern (Software Development Engineer in Test)
               </h2>
 
               <div className="listdiv">
                 <ul className="worklist">
                   <li>
                     <h3>
-                      Had found multiple Major bugs in production post joining the team and Developed BDD framework from scratch following company standards and wrote 200+ Automation scripts increasing Automation coverage to 50%.
-                    </h3>
+                    Identified and reported critical bugs, enhancing product stability and quality during the testing lifecycle.</h3>
+                  </li>
+                  <li>
+                    <h3>
+                    Developed and maintained automation test scripts, contributing to multiple frameworks including Hybrid, BDD, and Data-Driven frameworks.</h3>
                   </li>
                   </ul>
                   </div>

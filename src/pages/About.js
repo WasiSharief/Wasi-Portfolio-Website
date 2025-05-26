@@ -16,7 +16,7 @@ export default function About({ ref }) {
           from scratch, Developing Websites and integrating customized AI chatbots into websites
           for enhanced user interaction. I'm certified in Automation Testing, Full Stack Development
           (JavaScript & React), SDET practices, AI Prompt Engineering, and CI/CD 
-          integrations using Jenkins. Focused on delivering high-quality software to the Team / Company I work for and
+          integrations using Jenkins. Focused on Creatively Solving problems & delivering high-quality software to the Team / Company I work for and
           constantly exploring new Technologies..
         </h2>
       </div>
