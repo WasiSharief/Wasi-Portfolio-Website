@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaArrowCircleDown } from "react-icons/fa";
 import { HideTopContext } from "../context/HideTopContextApi";
 import { ScrollMenuContext } from "../context/ScrollMenuContext";
+import AiChatBot from "../utilities/AiChatBot";
 
 export default function NavHorizontal({
   Scroll,
@@ -11,29 +12,9 @@ export default function NavHorizontal({
   SectionsRefs,
   scrollRef,
 }) {
+
   const { smoothScrollInContainer } = useContext(ScrollMenuContext);
 
-  // const smoothScrollInContainer = (container, targetEl, duration = 1000) => {
-  //   const startY = container.scrollTop;
-  //   const targetY = targetEl.offsetTop - 150;
-  //   const diff = targetY - startY;
-  //   let startTime;
-
-  //   const step = (timestamp) => {
-  //     if (!startTime) startTime = timestamp;
-  //     const timeElapsed = timestamp - startTime;
-  //     const progress = Math.min(timeElapsed / duration, 1);
-  //     container.scrollTop = startY + diff * easeInOutQuad(progress);
-
-  //     if (progress < 1) {
-  //       requestAnimationFrame(step);
-  //     }
-  //   };
-
-  //   const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
-
-  //   requestAnimationFrame(step);
-  // };
 
   const { HideTop, setHideTopContext } = useContext(HideTopContext);
   //   const [HideTop, setHideTop] = useState(false);
@@ -51,6 +32,8 @@ export default function NavHorizontal({
     );
     SectionsRefs.current.skill?.scrollIntoView({ behavior: "smooth" });
   };
+
+  
 
   return (
     <div className="NavHorDivClass" ref={HorizontalNavRef}>

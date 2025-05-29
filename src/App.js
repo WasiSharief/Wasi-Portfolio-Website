@@ -11,6 +11,7 @@ import Playstore from "./pages/Playstore";
 import Certifications from "./pages/Certifications";
 import Contact from "./pages/Contact";
 import { ScrollMenuContext } from "./context/ScrollMenuContext";
+import AiChatBot from "./utilities/AiChatBot";
 
 function App() {
   const [Scroll, setScroll] = useState("normal");
@@ -103,15 +104,11 @@ function App() {
     const scrollTop = div.scrollTop;
     const scrollHeight = div.scrollHeight - div.clientHeight;
 
-    // console.log("Screoll Top: ", scrollTop);
-    // console.log("scrollHeight: ", scrollHeight);
-    // console.log("div.clientHeight", div.clientHeight);
-
     const percent = scrollHeight === 0 ? 0 : (scrollTop / scrollHeight) * 100;
     setScrollPercent(percent.toFixed(0));
 
     console.log("The percentage is: ", scrollPercent);
-    if (scrollPercent >= 5) {
+    if (scrollPercent >= 1) {
       setScroll("low");
       // setScrollPercent(scrollPercent + 5);
     } else {
@@ -121,17 +118,14 @@ function App() {
     return;
   };
 
-  // useEffect(() => {
-
-  //   SectionsRefs.current.contact.scrollIntoView();
-
-  // }, []);
-
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
     setCoords({ x: e.clientX, y: e.clientY });
   };
+
+  
+ 
 
   // Hover animation will use it in future
   //   MainClass
@@ -150,38 +144,35 @@ function App() {
 
         <div ref={scrollRef} className="bodyDiv" onScroll={handleOnScroll}>
           <Home
-          scrollRef={scrollRef}
+            scrollRef={scrollRef}
             SectionsRefs={SectionsRefs}
             CurrentSection={CurrentSection}
             Scroll={Scroll}
             HorizontalNavRef={HorizontalNavRef}
           ></Home>
-          {/* <NavigationMenu/> */}
-          {/* <Routes> */}
-          {/* <Route path="/" element={ */}
-          
+
           <div className="AllSections">
             <About ref={(el) => (SectionsRefs.current.about = el)}></About>
-          {/* }>    */}
-          {/* </Route> */}
-          {/* <Route path="/s" element={ */}
-          <Skills ref={(el) => (SectionsRefs.current.skill = el)} CurrentSection={CurrentSection}></Skills>
-          {/* }> */}
 
-          {/* </Route> */}
-          <Work ref={(el) => (SectionsRefs.current.work = el)}></Work>
-          <Projects
-            ref={(el) => (SectionsRefs.current.projects = el)}
-          ></Projects>
-          <Playstore
-            ref={(el) => (SectionsRefs.current.playstore = el)}
-          ></Playstore>
-          <Certifications
-            ref={(el) => (SectionsRefs.current.certification = el)}
-          ></Certifications>
-          <Contact ref={(el) => (SectionsRefs.current.contact = el)}></Contact>
+            <Skills
+              ref={(el) => (SectionsRefs.current.skill = el)}
+              CurrentSection={CurrentSection}
+            ></Skills>
+
+            <Work ref={(el) => (SectionsRefs.current.work = el)}></Work>
+            <Projects
+              ref={(el) => (SectionsRefs.current.projects = el)}
+            ></Projects>
+            <Playstore
+              ref={(el) => (SectionsRefs.current.playstore = el)}
+            ></Playstore>
+            <Certifications
+              ref={(el) => (SectionsRefs.current.certification = el)}
+            ></Certifications>
+            <Contact
+              ref={(el) => (SectionsRefs.current.contact = el)}
+            ></Contact>
           </div>
-          {/* </Routes> */}
         </div>
       </Router>
     </div>

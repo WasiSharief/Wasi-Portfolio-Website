@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Sling as Hamburger } from "hamburger-react";
 import "../styles/mainStyle.css";
@@ -9,8 +9,16 @@ export default function HamburgerNav({
   CurrentSection,
   SectionsRefs,
   scrollRef,
+  MenuOpenF
 }) {
+  
   const [isOpen, setOpen] = useState(false);
+
+  useEffect(()=> {
+
+    MenuOpenF(true)
+    }, [isOpen])
+
 
   return (
     <div className="HamContainer">

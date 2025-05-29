@@ -9,6 +9,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { useContext } from "react";
 import { HideTopContext } from "../context/HideTopContextApi";
+import AiChatBot from "../utilities/AiChatBot";
 
 
 export default function Home({ Scroll, divRef, HorizontalNavRef, CurrentSection, SectionsRefs, scrollRef  }) {
@@ -16,6 +17,43 @@ export default function Home({ Scroll, divRef, HorizontalNavRef, CurrentSection,
 
   const [hoverON, setHover] = useState(false);
   const { HideTop } = useContext(HideTopContext);
+  const [MenuOpened, SetMenuOpen] = useState(false)
+
+
+ //AI chat BOt logic
+ const [messages, setMessages] = useState([]);
+
+ const sendMessage = async (userText) => {
+   const newMessages = [...messages, { from: "user", text: userText }];
+   setMessages(newMessages);
+
+   console.log(userText);
+
+   try {
+     const res = await fetch("http://localhost:3001/api/chat", {
+       method: "POST",
+       headers: { "Content-Type": "application/json" },
+       body: JSON.stringify({ message: userText }),
+     });
+
+     const data = await res.json();
+     setMessages([...newMessages, { from: "bot", text: data.reply }]);
+   } catch (err) {
+     setMessages([
+       ...newMessages,
+       { from: "bot", text: "Error getting response." },
+     ]);
+   }
+ };
+
+
+const MenuOpenF = (status) => {
+  if(status)
+  {
+  SetMenuOpen((prev) => !prev);
+  }
+}  
+
 
   return (
     <div className="Home">
@@ -109,10 +147,13 @@ export default function Home({ Scroll, divRef, HorizontalNavRef, CurrentSection,
               </div>
             </div>
 
-            <HamburgerNav scrollRef={scrollRef} SectionsRefs={SectionsRefs} CurrentSection={CurrentSection}  />
+            <HamburgerNav MenuOpenF={MenuOpenF} scrollRef={scrollRef} SectionsRefs={SectionsRefs} CurrentSection={CurrentSection}  />
+
           </div>
         </div>
         <NavHorizontal scrollRef={scrollRef} SectionsRefs={SectionsRefs} CurrentSection={CurrentSection} HorizontalNavRef={HorizontalNavRef} Scroll={Scroll}></NavHorizontal>
+        <AiChatBot MenuOpened={MenuOpened}  Scroll={Scroll} messages={messages} onSend={sendMessage}></AiChatBot>
+
       </div>
     </div>
   );
