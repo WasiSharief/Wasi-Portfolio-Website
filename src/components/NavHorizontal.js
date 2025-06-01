@@ -10,7 +10,7 @@ export default function NavHorizontal({
   HorizontalNavRef,
   CurrentSection,
   SectionsRefs,
-  scrollRef,
+  scrollRef
 }) {
 
   const { smoothScrollInContainer } = useContext(ScrollMenuContext);
@@ -20,6 +20,8 @@ export default function NavHorizontal({
   //   const [HideTop, setHideTop] = useState(false);
 
   // const { SectionsRefsCon  } = useContext(ScrollMenuContext);
+
+
 
   const HandleHideTop = () => {
     setHideTopContext((prev) => !prev);

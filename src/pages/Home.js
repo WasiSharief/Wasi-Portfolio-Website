@@ -27,7 +27,6 @@ export default function Home({ Scroll, divRef, HorizontalNavRef, CurrentSection,
    const newMessages = [...messages, { from: "user", text: userText }];
    setMessages(newMessages);
 
-   console.log(userText);
 
    try {
      const res = await fetch("http://localhost:3001/api/chat", {
@@ -53,6 +52,8 @@ const MenuOpenF = (status) => {
   SetMenuOpen((prev) => !prev);
   }
 }  
+
+
 
 
   return (
@@ -152,7 +153,7 @@ const MenuOpenF = (status) => {
           </div>
         </div>
         <NavHorizontal scrollRef={scrollRef} SectionsRefs={SectionsRefs} CurrentSection={CurrentSection} HorizontalNavRef={HorizontalNavRef} Scroll={Scroll}></NavHorizontal>
-        <AiChatBot MenuOpened={MenuOpened}  Scroll={Scroll} messages={messages} onSend={sendMessage}></AiChatBot>
+        <AiChatBot HideTop={HideTop} MenuOpened={MenuOpened}  Scroll={Scroll} messages={messages} onSend={sendMessage}></AiChatBot>
 
       </div>
     </div>

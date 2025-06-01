@@ -188,7 +188,7 @@ li {
   /* background-color: #00d4ff; */
   /* visibility: hidden; */
   /* border: 1px red solid; */
-  z-index: 10; 
+  z-index: 10;
   /* background-color: #00d4ff; */
 }
 
@@ -430,6 +430,13 @@ li {
   font-size: 90px;
   transition: 0.5s ease-in-out;
   animation: glow 1.5s infinite alternate, shake 2s infinite alternate;
+}
+
+.AIanimation
+{
+  font-size: 90px;
+  transition: 0.5s ease-in-out;
+  /* animation: shake 2s infinite alternate; */
 }
 
 @keyframes glow {
@@ -1462,19 +1469,18 @@ ul.worklist h3::before {
   padding: 16rem;
 }
 
-.contactMain{
+.contactMain {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-.contactSocialMedia
-{
+.contactSocialMedia {
   width: 50rem;
 }
 
-.copyright{
+.copyright {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -1482,14 +1488,61 @@ ul.worklist h3::before {
 
 .copyright h4 {
   font-weight: 500;
-
 }
 /* -------------------------------------------- */
 
 /* -------------------------------AI Chat Bot----------------------- */
 
-.chatMainDiv{
-  margin-top: -40.5rem;
+.AIStartDiv{
+  /* transition:1s ease-in-out; */
+  width: 500px;
+  height: 70px;
+  background-color: black;
+  visibility: visible;
+  /* padding: 5rem; */
+  margin: 1rem;
+  transition: 1s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  border: 4px solid #ffd700;
+  color: white;
+  transition:1s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards; 
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.AI-Icon{
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid red; */
+  /* background-color: #0f0f0f; */
+}
+.AI-usage-infodiv{
+  align-self: center;
+}
+
+.AI-usage-infodiv h1{
+  font-size: 1.5rem;
+}
+
+.AI-Face{
+  width: 220px;
+  height: 220px;
+}
+
+.chatMainDiv {
+  margin-top: -20.5rem;
   position: absolute;
   width: 100%;
   height: 40rem;
@@ -1503,76 +1556,199 @@ ul.worklist h3::before {
   transition: 1s ease-in-out;
 }
 
-
-.chattoggleTOp
-{
+.chattoggleTOp {
   margin-top: -4rem;
   transition: 1s ease-in-out;
-
 }
 
-
-
 .chat-container {
-  visibility:visible;
+  visibility: visible;
   width: 30rem;
-  height: 35rem;
+  height: 50rem;
   position: fixed;
-  background: #efcc04;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  background: black;
+  padding: 2rem;
+  padding-top: 0rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin-right: 1rem;
-  display:flex;
+  display: flex;
   align-items: initial;
   justify-content: flex-end;
   flex-direction: column;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  border: 0.3rem solid #ffd700;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards; 
 }
 
-.chattogglemenu{
-  z-index:-1;
+.chattogglemenu {
+  z-index: -1;
   transition: .5s ease-in-out;
-  width: 0rem;
-  visibility: hidden;
-  
+  margin-right: 11%;
 }
 
 .chat-window {
-  max-height: 400px;
+  padding: 1rem 1rem 1rem 1rem;
+  /* padding-bottom: 1rem; */
+  max-height: 700px;
+  /* min-height: 430px; */
   overflow-y: auto;
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: end;
+}
+
+.chat-window-outer {
+  width: 100%;
+  min-height: 625px;
+  /* border-top: 1px solid #ffd700; */
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.chat-window::-webkit-scrollbar {
+  display: none;
 }
 
 .msg {
   margin-bottom: 0.5rem;
+  font-weight: 600;
+  width:fit-content;
 }
 
+.msg p {
+  /* padding: 8px 12px; */
+  padding: 0.8rem;
+  /* width: 100%; */
+  /* text-align: right; */
+  /* border: 1px solid red; */
+  border-radius: 1rem;
+  transition: 1s ease-in-out;
+  
+
+}
+
+
 .msg.user {
-  text-align: right;
-  color: blue;
+  align-self: flex-end;
+  text-align: left;
+  color: rgb(251, 251, 255);
+  display: block;
+
+}
+
+.user p {
+  background-color: #fff;
+  color: black;
+  
+}
+
+.bot p{
+  background-color: #ffd700;
+  color: black;
 }
 
 .msg.bot {
+  align-self: flex-start;
   text-align: left;
-  color: green;
+  color: #efcc04;
 }
 
 .chat-form {
   display: flex;
   gap: 0.5rem;
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .chat-form input {
   flex: 1;
-  padding: 0.7rem;
+  padding: 1rem;
   font-size: 1rem;
+  border-radius: 2rem;
+  border: none;
+  font-weight: 600;
+  /* border: .4rem solid #efcc04; */
+}
+
+.chat-form input:focus {
+  outline: none;
 }
 
 .chat-form button {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   font-size: 1rem;
+  background-color: #ffd700;
+  border-radius: 0.2rem;
+  font-weight: 600;
+  margin-left: 1rem;
 }
 
+.chattopdiv {
+  color: white;
+  /* border: 1px solid red; */
+  padding: 0rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: .3rem solid #ffd700;
+ height: fit-content;
+  align-items: center;
+  /* margin-bottom: 70%; */
+}
+
+.AI-V-Alingment{
+  margin-top: 8%;
+}
+
+.chattopdiv h1 {
+  color: #ffd700;
+  /* border-bottom: 1px solid #efcc04; */
+  padding: 0.5rem;
+  /* border-radius: 2rem; */
+  text-align: center;
+  /* border-bottom: 1px solid #ffd700; */
+}
+
+.chattopdiv h4 {
+  display: inline;
+  font-size: large;
+}
+
+.chattopdiv span {
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  /* border: 1px solid red; */
+  border: 1px solid white;
+}
+
+
+.AIanimation
+{
+  font-size: 90px;
+  transition: 0.5s ease-in-out;
+  animation: shakeAI 1s infinite alternate;
+}
+
+@keyframes shakeAI {
+  0% {
+    scale: 1.05;
+    transform: rotate(-1deg);
+  }
+  20% {
+    /* scale: 1.1; */
+    transform: rotate(1deg);
+  }
+  60% {
+    /* scale: 1; */
+    transform: rotate(0deg);
+  }
+  100% {
+    /* scale: 1.1; */
+    transform: rotate(1deg);
+  }
+}

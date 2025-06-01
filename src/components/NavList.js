@@ -13,9 +13,7 @@ export default function NavList({
   SectionsRefs,
   scrollRef,
 }) {
-
-
-const {smoothScrollInContainer } = useContext(ScrollMenuContext);
+  const { smoothScrollInContainer } = useContext(ScrollMenuContext);
 
   return (
     <div className="NavList">
@@ -35,13 +33,14 @@ const {smoothScrollInContainer } = useContext(ScrollMenuContext);
               } `}
             >
               <Link
-                onClick={() =>
+                onClick={() => {
                   smoothScrollInContainer(
-                    scrollRef.current, // container (e.g., a scrollable div)
-                    SectionsRefs.current.about, // target element inside container
-                    1500 // duration in ms
-                  )
-                }
+                    scrollRef.current,
+                    SectionsRefs.current.about,
+                    1500
+                  );
+                  setOpen(false);
+                }}
                 className=""
                 to="/"
               >
@@ -56,13 +55,14 @@ const {smoothScrollInContainer } = useContext(ScrollMenuContext);
               }`}
             >
               <Link
-                onClick={() =>
+                onClick={() => {
                   smoothScrollInContainer(
                     scrollRef.current, // container (e.g., a scrollable div)
                     SectionsRefs.current.skill, // target element inside container
                     1500 // duration in ms
-                  )
-                }
+                  );
+                  setOpen(false);
+                }}
               >
                 Skills{" "}
               </Link>
@@ -70,18 +70,17 @@ const {smoothScrollInContainer } = useContext(ScrollMenuContext);
           </li>
           <li>
             <h3
-              className={`${
-                CurrentSection === "Work" ? "presentVerMenu" : ""
-              }`}
+              className={`${CurrentSection === "Work" ? "presentVerMenu" : ""}`}
             >
               <Link
-                onClick={() =>
+                onClick={() => {
                   smoothScrollInContainer(
                     scrollRef.current, // container (e.g., a scrollable div)
                     SectionsRefs.current.work, // target element inside container
                     1500 // duration in ms
-                  )
-                }
+                  );
+                  setOpen(false);
+                }}
               >
                 Work
               </Link>
@@ -94,13 +93,14 @@ const {smoothScrollInContainer } = useContext(ScrollMenuContext);
               }`}
             >
               <Link
-                onClick={() =>
+                onClick={() => {
                   smoothScrollInContainer(
                     scrollRef.current, // container
                     SectionsRefs.current.projects, // target element inside container
                     1500 // duration in ms
-                  )
-                }
+                  );
+                  setOpen(false);
+                }}
               >
                 Projects
               </Link>
@@ -113,13 +113,14 @@ const {smoothScrollInContainer } = useContext(ScrollMenuContext);
               }`}
             >
               <Link
-                onClick={() =>
+                onClick={() => {
                   smoothScrollInContainer(
                     scrollRef.current, // container
                     SectionsRefs.current.playstore, // target element inside container
                     1500 // duration in ms
-                  )
-                }
+                  );
+                  setOpen(false);
+                }}
               >
                 Play Store
               </Link>
@@ -132,13 +133,14 @@ const {smoothScrollInContainer } = useContext(ScrollMenuContext);
               }`}
             >
               <Link
-                onClick={() =>
+                onClick={() => {
                   smoothScrollInContainer(
                     scrollRef.current, // container (e.g., a scrollable div)
                     SectionsRefs.current.certification, // target element inside container
                     1500 // duration in ms
-                  )
-                }
+                  );
+                  setOpen(false);
+                }}
               >
                 Certifications
               </Link>
@@ -151,13 +153,14 @@ const {smoothScrollInContainer } = useContext(ScrollMenuContext);
               }`}
             >
               <Link
-                onClick={() =>
+                onClick={() => {
                   smoothScrollInContainer(
                     scrollRef.current, // container (e.g., a scrollable div)
                     SectionsRefs.current.contact, // target element inside container
                     1500 // duration in ms
-                  )
-                }
+                  );
+                  setOpen(false);
+                }}
               >
                 Contact Me
               </Link>
@@ -169,28 +172,41 @@ const {smoothScrollInContainer } = useContext(ScrollMenuContext);
       <div className="SocialMediaList">
         <h1>
           {" "}
-          <a href="https://www.linkedin.com/in/wasiulla-sharief-3311131a4/" target={"_blank"}><FaLinkedin
-            className="SocialIconsSpace"
-            style={{ fontSize: 30, color: "#0072b1" }}
-          />
+          <a
+            href="https://www.linkedin.com/in/wasiulla-sharief-3311131a4/"
+            target={"_blank"}
+          >
+            <FaLinkedin
+              className="SocialIconsSpace"
+              style={{ fontSize: 30, color: "#0072b1" }}
+            />
           </a>
         </h1>
         <h1>
           {" "}
-          <a href="https://stackoverflow.com/users/12483849/wasi-sharief" target={"_blank"}><FaStackOverflow color="black" className="SocialIconsSpace" />
+          <a
+            href="https://stackoverflow.com/users/12483849/wasi-sharief"
+            target={"_blank"}
+          >
+            <FaStackOverflow color="black" className="SocialIconsSpace" />
           </a>
         </h1>
 
         <h1>
           {" "}
-
-          <a href="https://www.instagram.com/wasi_sharief/?igsh=ZHhzZXZpY295MTQ3#" target={"_blank"}><FaInstagramSquare color="black" className="SocialIconsSpace" />
+          <a
+            href="https://www.instagram.com/wasi_sharief/?igsh=ZHhzZXZpY295MTQ3#"
+            target={"_blank"}
+          >
+            <FaInstagramSquare color="black" className="SocialIconsSpace" />
           </a>
         </h1>
         <h1>
           {" "}
-          <a href="https://github.com/WasiSharief" target={"_blank"} ><FaGithubSquare color="black" className="SocialIconsSpace" />
-          </a></h1>
+          <a href="https://github.com/WasiSharief" target={"_blank"}>
+            <FaGithubSquare color="black" className="SocialIconsSpace" />
+          </a>
+        </h1>
       </div>
     </div>
   );
