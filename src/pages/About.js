@@ -10,7 +10,7 @@ export default function About({ ref }) {
           <h3 className="globalColor">I'm Wasi ulla Sharief.</h3>
           &nbsp;A Software Engineer
           with around 4 years of experience, currently working at <h3 className="globalColor"><a href="https://www.synechron.com/en-in" target={"_blank"}>Synechron</a></h3>. 
-          <br></br>I specialize in Building  and Testing scalable Web applications, Apps, API Services,
+          I specialize in Building  and Testing scalable Web applications, Apps, API Services,
           combining strong skills with a solid foundation in Test
           Automation. My expertise includes developing Automation frameworks
           from scratch, Developing Websites and integrating customized AI chatbots into websites

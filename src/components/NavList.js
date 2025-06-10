@@ -22,7 +22,7 @@ export default function NavList({
           <li>
             <h2>
               <Link className="backIcon" onClick={() => setOpen(false)}>
-                <IoArrowBackCircleSharp size={50} />{" "}
+                <IoArrowBackCircleSharp size={40} />{" "}
               </Link>{" "}
             </h2>
           </li>
@@ -178,7 +178,7 @@ export default function NavList({
           >
             <FaLinkedin
               className="SocialIconsSpace"
-              style={{ fontSize: 30, color: "#0072b1" }}
+              style={{ color: "#0072b1" }}
             />
           </a>
         </h1>

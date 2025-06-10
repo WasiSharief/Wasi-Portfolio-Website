@@ -25,7 +25,7 @@ export default function HamburgerNav({
       <div className={`haminner-div ${isOpen ? "MoveIcon" : ""}`}>
         <GiHamburgerMenu
           color="white"
-          size={50}
+          size={35}
           onClick={() => setOpen(true)}
         />
       </div>

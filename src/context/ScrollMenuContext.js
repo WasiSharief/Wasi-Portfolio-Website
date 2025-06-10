@@ -9,7 +9,7 @@ export const ScrollMenuProvider = ({ children }) => {
       if (!container || !targetEl) return;
   
       const startY = container.scrollTop;
-      const targetY = targetEl.offsetTop - 400; // adjust offset if needed
+      const targetY = targetEl.offsetTop - 250; // adjust offset if needed
       const diff = targetY - startY;
       let startTime = null;
   

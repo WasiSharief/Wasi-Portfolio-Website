@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowCircleDown } from "react-icons/fa";
 import { HideTopContext } from "../context/HideTopContextApi";
@@ -35,19 +35,26 @@ export default function NavHorizontal({
     SectionsRefs.current.skill?.scrollIntoView({ behavior: "smooth" });
   };
 
+  useEffect(()=> {
+    if(Scroll ==='normal')
+    {
+      setHideTopContext(false);
+    }
+  }
+  ,[Scroll])
   
 
   return (
-    <div className="NavHorDivClass" ref={HorizontalNavRef}>
+    <div className="NavHorDivClass" >
       <FaArrowCircleDown
         onClick={HandleHideTop}
         className={`MinimizeArrow ${
           Scroll === "low" || HideTop ? "MinimizeArrowAfter" : ""
-        } ${HideTop ? "RotateArrow" : ""}`}
+        } ${HideTop ? "RotateArrow" : ""} `}
         color="white"
       />
       <nav>
-        <ul className="navListHorizontal">
+        <ul className="navListHorizontal" ref={HorizontalNavRef}>
           <li>
             <h3
               className={`navHList ${

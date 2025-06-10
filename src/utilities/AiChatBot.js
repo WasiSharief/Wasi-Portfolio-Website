@@ -6,7 +6,7 @@ export default function AiChatBot({ messages, onSend, Scroll, MenuOpened, HideTo
   const [input, setInput] = useState("");
   const bottomRef = useRef(null);
 
-  const [AIShow, setAIShow] = useState(true);
+  const [AIShow, setAIShow] = useState(false);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -25,9 +25,9 @@ export default function AiChatBot({ messages, onSend, Scroll, MenuOpened, HideTo
   }
 
   return (
-    <div className={`chatMainDiv ${Scroll === "low" ? "chattoggleTOp" : ""} ${HideTop ? 'AI-V-Alingment' : ''}`}>
+    <div className={`chatMainDiv   ${AIShow ? 'AIMarginTop': ''}`}>
       {!AIShow && (
-        <div className={`AIStartDiv ${MenuOpened ? "chattogglemenu" : ""}`} onClick={AItoggle}>
+        <div className={`AIStartDiv ${MenuOpened ? "chattogglemenu" : ""} ${Scroll === "low" ? "chattoggleTOp" : ""} ${HideTop ? 'AI-V-Alingment' : ''}`} onClick={AItoggle} >
           {" "}
           <div className="AI-usage-infodiv">
             <h1>Hi, I'm Chris (Wasi's AI)</h1>
@@ -45,7 +45,7 @@ export default function AiChatBot({ messages, onSend, Scroll, MenuOpened, HideTo
       )}
 
       {AIShow && (
-        <div className={`chat-container ${MenuOpened ? "chattogglemenu" : ""}`}>
+        <div className={`chat-container ${MenuOpened ? "chattogglemenu" : ""} ${Scroll === "low" ? "chattoggleTOp-chatwindow" : ""} ${HideTop ? 'AI-V-Alingment-chatwindow' : ''}`}>
           <div className="chattopdiv">
             {" "}
             <h1>

@@ -20,7 +20,7 @@ function App() {
   const [scrollPercent, setScrollPercent] = useState(0);
   const Aboutref = useRef(null);
 
-  // const {SectionsRefsCon} = useContext(ScrollMenuContext);
+// const {SectionsRefsCon} = useContext(ScrollMenuContext);
 
   const SectionsRefs = useRef({
     about: null,
@@ -42,21 +42,24 @@ function App() {
     // const rect = divRef.current.getBoundingClientRect();
     // const windowHeight = window.innerHeight;
 
-    const skillTop = SectionsRefs.current.skill?.getBoundingClientRect().top;
-    const navBottom = HorizontalNavRef.current.getBoundingClientRect().bottom;
+  const skillTop = SectionsRefs.current.skill?.getBoundingClientRect().top;
+  const navBottom = HorizontalNavRef.current.getBoundingClientRect().bottom;
 
     switch (true) {
       case SectionsRefs.current.about?.getBoundingClientRect().top <=
         HorizontalNavRef.current.getBoundingClientRect().top + 75 &&
         SectionsRefs.current.about?.getBoundingClientRect().top >=
-          HorizontalNavRef.current.getBoundingClientRect().top - 75:
+          HorizontalNavRef.current.getBoundingClientRect().bottom - 75:
         setCurrentSection("About");
         break;
 
       case SectionsRefs.current.skill?.getBoundingClientRect().top <=
         navBottom + 75 &&
         SectionsRefs.current.skill?.getBoundingClientRect().top >=
-          navBottom - 75:
+          navBottom - 75 || SectionsRefs.current.skill?.getBoundingClientRect().bottom <=
+          navBottom + 75 &&
+          SectionsRefs.current.skill?.getBoundingClientRect().bottom >=
+            navBottom - 75:
         setCurrentSection("Skill");
         break;
 
@@ -84,7 +87,7 @@ function App() {
       case SectionsRefs.current.certification?.getBoundingClientRect().top <=
         navBottom + 75 &&
         SectionsRefs.current.certification?.getBoundingClientRect().top >=
-          navBottom - 75:
+          navBottom -75:
         setCurrentSection("Certifications");
         break;
 
@@ -113,7 +116,7 @@ function App() {
       // setScrollPercent(scrollPercent + 5);
     } else {
       setScroll("normal");
-    }
+       }
 
     return;
   };
@@ -129,16 +132,19 @@ function App() {
 
   // Hover animation will use it in future
   //   MainClass
-  //   <div
-  //   className="hover-highlight"
-  //   style={{
-  //     left: coords.x - 200 + 'px',
-  //     top: coords.y - 200 + 'px',
-  //   }}
-  // ></div>
+   
 
   return (
-    <div onMouseMove={handleMouseMove}>
+    <div className="appClass" onMouseMove={handleMouseMove}>
+       <div
+    className="hover-highlight"
+    style={{
+      left: coords.x - 50 + 'px',
+      top: coords.y - 50 + 'px',
+    }}
+  >
+
+  </div>
       <Router>
         <div className="headClass"></div>
 

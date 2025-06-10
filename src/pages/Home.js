@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/mainStyle.css";
 // import Myimage from '../assets/Mypics/1000074512.ipg'
 import HamburgerNav from "../components/HamburgerNav";
@@ -16,7 +16,7 @@ export default function Home({ Scroll, divRef, HorizontalNavRef, CurrentSection,
   const image = require("../assets/Mypics/MyPic.png");
 
   const [hoverON, setHover] = useState(false);
-  const { HideTop } = useContext(HideTopContext);
+  const { HideTop, setHideTopContext } = useContext(HideTopContext);
   const [MenuOpened, SetMenuOpen] = useState(false)
 
 
@@ -44,6 +44,7 @@ export default function Home({ Scroll, divRef, HorizontalNavRef, CurrentSection,
      ]);
    }
  };
+
 
 
 const MenuOpenF = (status) => {
@@ -125,7 +126,7 @@ const MenuOpenF = (status) => {
                   {" "}
                  <a href="https://www.linkedin.com/in/wasiulla-sharief-3311131a4/" target={"_blank"}><FaLinkedin
                     className="SocialspaceHome"
-                    style={{ fontSize: 30, color: "#0072b1" }}
+                    style={{ color: "#0072b1" }}
                   />
                   </a>
                 </h1>
