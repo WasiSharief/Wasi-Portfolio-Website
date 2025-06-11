@@ -72,7 +72,7 @@ export default function Work({ ref }) {
           </div>
           <div className="companyduration">
             <div className="companylabeldiv">
-              <h1 className="Company2" ><a href="https://www.linkedin.com/company/moosa-socmedia/?originalSubdomain=inn" target={"_blank"}>Moosa SOCMEDIA (2019 - 2020)</a></h1>
+              <h1 className="Company2" ><a href="https://www.linkedin.com/company/moosa-socmedia/?originalSubdomain=inn" target={"_blank"}>Moosa Socmedia (2019 - 2020)</a></h1>
             </div>
 
             <div className="WorkDetails">

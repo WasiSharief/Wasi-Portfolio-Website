@@ -154,7 +154,7 @@ export default function Projects({ ref }) {
               Hoveron === "BDDFramework" ? "opactiyZero" : ""
             }`}
           >
-           BDD Automation Framework
+           BDD Framework
           </h1>
         </div>
       </div>

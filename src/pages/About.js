@@ -23,7 +23,7 @@ export default function About({ ref }) {
       <div className="aboutTable">
       <div className="Label-Info">
             <h2>Education: </h2>
-            <h3>Bachelor of Computer Applications (BCA - 2019) </h3>
+            <h3>BCA (2019 - 61%) </h3>
       </div>
       <div className="Label-Info">
             <h2>Date of birth: </h2>

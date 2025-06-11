@@ -62,11 +62,11 @@ const MenuOpenF = (status) => {
       <div className="InvisibleDiv">
         <div
           ref={divRef}
-          className={`HomeOuterDiv ${Scroll === "low" ? "reduceTopDiv" : ""} ${HideTop ? 'HideTopDiv' : ''}`}
+          className={`HomeOuterDiv ${Scroll === "low" ? "reduceTopDiv" : ""} ${HideTop ? 'HideTopDiv reduceTopDiv-mobile' : ''}`}
         >
           <div
             className={`LeftDiv reduceHight_${Scroll} ${
-              Scroll === "low" ? "leftSlide" : ""
+              Scroll === "low" ? "leftSlide mobile-left-div" : ""
             } ${HideTop ? 'OpacityHide': ''}`}
           >
             <div
@@ -106,7 +106,7 @@ const MenuOpenF = (status) => {
                 className={`ImageDiv ${
                   hoverON ? "" : ""
                 } reduceHight_${Scroll} ${
-                  Scroll === "low" ? "ReduceImage" : ""
+                  Scroll === "low" ? "ReduceImage mobile-Img-Div" : ""
                 }`}
               >
                 <img
